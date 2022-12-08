@@ -1,0 +1,46 @@
+@import "~bootstrap/scss/bootstrap";
+
+@import "./scss/style.scss";
+
+.font_avertastd_regular {
+    font-family: 'Avertastd-Regular', sans-serif;
+}
+
+.font_rifficfree {
+    font-family: 'Rifficfree-Bold', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: rgb(15, 23, 42);
+  }
+  .App {
+    display: flex;
+  }
+  main {
+    padding: 10px;
+  }
+  
+  .layout-container {
+    width: 100%;
+  }
+  
+  .left-side-bar {
+    top: 0px;
+    left: 0px;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+  }
+  
+  .left-side-bar-collapsed {
+    width: 70px !important;
+  }
+  
+  .left-side-bar-collapsed .left-side-bar-menu-link-text {
+    display: none !important;
+  }
+  
+  

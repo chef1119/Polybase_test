@@ -1,0 +1,26 @@
+.textfield  .MuiOutlinedInput-root {
+    border-radius: 0.75rem;
+    background-color: #1e293b;
+    border: none;
+    color:white;
+}
+
+.textfield .MuiInputLabel-root {
+    color:rgb(75, 90, 112);
+    font-weight: bold;
+}
+
+.textfieldwallet  .MuiOutlinedInput-root {
+    border-radius: 0.75rem;
+    background-color: #1e293b;
+    border: none;
+    color:rgb(75, 90, 112);
+}
+
+.textfieldwallet .MuiInputLabel-root {
+    color:rgb(75, 90, 112);
+    font-weight: bold;
+}
+.MuiOutlinedInput-notchedOutline {
+    border: none!important;
+}
