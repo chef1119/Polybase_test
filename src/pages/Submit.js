@@ -155,7 +155,11 @@ export default function Submit() {
                     }}
                     required
                   />
+                  <Typography align="center" fontStyle={{color:'#94a3b8'}} sx={{ marginTop:'10px', marginBottom:'15px'}}>
+                    The wallet address can be used for only one submission
+                  </Typography>
                 </Grid>
+                
                 <Grid item xs={12} sx={{textAlign:'center'}}>
                   <Button onClick={onSubmit} sx={{backgroundColor:'#3b82f6', color:'white', borderRadius:'1rem', width:'100%', height:'60px'}}>Submit</Button>
                 </Grid>
