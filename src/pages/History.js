@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { Box, Container } from "@mui/material";
 import WalletConnect from "../components/WalletConnect";
 import { Polybase } from '@polybase/client';
@@ -8,16 +8,8 @@ import './style.scss'
 export default function History() {
 
   const [history, setHistory] = useState([]);
-
-  useEffect(() => {
-    getData();
-  }, []);
-
-  const createData = (txHash, firstName, lastName, emailAddr, address, city, state, zip, country, payment) => {
-    return { txHash, firstName, lastName, emailAddr, address, city, state, zip, country, payment };
-  }
-
-  const getData = async() => {
+  
+  const getData = useCallback( async () => {
     const db = new Polybase({ defaultNamespace: "submit_test" })
     const collectionReference = db.collection("Submissions")
     const records = await collectionReference.get()
@@ -39,6 +31,14 @@ export default function History() {
       updateData.push(temp);
     }
     setHistory(updateData);
+  }, []);
+
+  useEffect(() => {
+    getData();
+  }, [getData]);
+
+  const createData = (txHash, firstName, lastName, emailAddr, address, city, state, zip, country, payment) => {
+    return { txHash, firstName, lastName, emailAddr, address, city, state, zip, country, payment };
   }
 
   return (
